@@ -1,0 +1,147 @@
+.line-form {
+  background-color: white;
+  border-radius: 20px;
+  padding-top: 37px;
+  padding-left: 51px;
+  padding-right: 51px;
+  padding-bottom: 28px;
+
+  @media (max-width: 1150px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  &_desc {
+    position: relative;
+    top: 35px;
+
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+
+  &_steps {
+    position: relative;
+    top: 35px;
+    box-shadow: 0px 17px 103px 0 rgba(31, 46, 124, 0.09);
+  }
+}
+
+.line-form__title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 27px;
+  text-align: center;
+
+  @media (max-width: 1150px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
+}
+
+.line-form__content {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  justify-content: space-between;
+  margin-bottom: 38px;
+
+  @media (max-width: 1150px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+
+.line-form__input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 38px;
+
+  @media (max-width: 1150px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.line-form__input-box {
+  @include max-width(203px);
+  position: relative;
+  border-bottom: 1px solid #a8a8a8;
+
+  @media (max-width: 650px) {
+    max-width: 300px;
+  }
+}
+
+.line-form__input {
+  font-size: 16px;
+  padding-left: 32px;
+  padding-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  outline: none;
+
+  &::-webkit-input-placeholder {
+    color: #a8a8a8;
+    font-style: italic;
+  }
+
+  &::-moz-placeholder {
+    color: #a8a8a8;
+    font-style: italic;
+  }
+
+  &:-ms-input-placeholder {
+    color: #a8a8a8;
+    font-style: italic;
+  }
+
+  &:-moz-placeholder {
+    color: #a8a8a8;
+    font-style: italic;
+  }
+}
+
+.line-form__policy {
+  @include max-width(798px);
+  font-size: 12px;
+  line-height: 1.33;
+  margin-bottom: 0;
+  color: #a8a8a8;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 650px) {
+    font-size: 12px !important;
+  }
+
+  button {
+    @include reset-btn;
+    color: #a8a8a8;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

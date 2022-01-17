@@ -1,0 +1,238 @@
+.calc {
+  background-color: #282d54;
+  @include bg;
+  background-image: url('/src/img/bgs/calc-bg.jpg');
+  padding-top: 74px;
+  padding-bottom: 105px;
+  min-height: 948px;
+  overflow: hidden;
+
+  @media (max-width: 960px) {
+    padding-bottom: 50px;
+    min-height: auto;
+    padding-top: 50px;
+    background-image: none;
+  }
+
+  @media (max-width: 650px) {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}
+
+.calc__title {
+  @include title;
+  @include max-width(687px);
+  margin-bottom: 38px;
+  color: white;
+
+  @media (max-width: 960px) {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+.calc__content {
+  @include max-width(429px);
+
+  @media (max-width: 960px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.calc__input-container {
+  margin-bottom: 89px;
+
+  @include tablet-mb(40px);
+  @include mobile-mb(20px);
+}
+
+.calc__input-box {
+  margin-bottom: 34px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include tablet-mb(27px);
+  @include mobile-mb(20px);
+}
+
+.calc__input-label {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.calc__input {
+  width: 100%;
+  height: 11px;
+  margin-bottom: 10px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(
+    to right,
+    $yellow 0%,
+    $yellow 50%,
+    white 50%,
+    white 100%
+  );
+  background-color: $yellow;
+  outline: none;
+  border-radius: 5px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+    -webkit-appearance: none;
+    appearance: none;
+    @include bg;
+    background-image: url('/src/img/icons/thumb.png');
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  &::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    -moz-appearance: none;
+    appearance: none;
+    @include bg;
+    background-image: url('/src/img/icons/thumb.png');
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  &::-ms-thumb {
+    width: 24px;
+    height: 24px;
+    appearance: none;
+    @include bg;
+    background-image: url('/src/img/icons/thumb.png');
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.calc__endpoints {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc__endpoint {
+  font-size: 14px;
+  color: white;
+  width: 19px;
+}
+
+.calc__result {
+  padding-left: 95px;
+  position: relative;
+  color: white;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 34px;
+
+  @media (max-width: 650px) {
+    padding-left: 0;
+  }
+
+  @include mobile-mb(20px);
+
+  b {
+    color: $yellow;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.1;
+
+    @media (max-width: 650px) {
+      font-size: 42px;
+    }
+  }
+
+  &::before {
+    width: 68px;
+    height: 68px;
+    content: '';
+    @include bg;
+    background-image: url('/src/img/icons/info-icon.png');
+    position: absolute;
+    left: 0px;
+    top: 6px;
+
+    @media (max-width: 650px) {
+      content: none;
+    }
+  }
+}
+
+.calc__img-box {
+  position: absolute;
+  right: -142px;
+  top: 26px;
+
+  @media (max-width: 1270px) {
+    right: 24px;
+    top: 166px;
+    z-index: -1;
+  }
+
+  @media (max-width: 1150px) {
+    right: -60px;
+  }
+
+  @media (max-width: 960px) {
+    display: none;
+  }
+}
+
+.calc__img-caption {
+  font-size: 48px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 0;
+  position: absolute;
+  top: 124px;
+  right: 134px;
+}

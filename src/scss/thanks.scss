@@ -1,0 +1,47 @@
+@import './lib/reboot.scss';
+@import './lib/fonts.scss';
+@import './base/variables.scss';
+@import './base/mixins.scss';
+@import './base/global.scss';
+@import './components/modal.scss';
+@import './components/priv-policy.scss';
+
+.thanks__html,
+.thanks__body {
+  height: 100%;
+}
+
+.thanks__body {
+  // background-image: url('/src/img/bgs/some-image.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.thanks__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.thanks__footer {
+  flex: 0 0 auto;
+}
+
+.thanks__header {
+  flex: 0 0 auto;
+}
+
+.thanks__container,
+.thanks__main,
+.thanks__wrapper {
+  height: 100%;
+}
+
+.thanks__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.thanks {
+  flex: 1 0 auto;
+}

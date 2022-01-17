@@ -1,0 +1,110 @@
+.technics {
+  @include bg;
+  background-image: url('/src/img/bgs/technics-bg.jpg');
+  padding-top: 64px;
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.technics__title {
+  @include title;
+  @include max-width(986px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 38px;
+  text-align: center;
+  color: white;
+
+  @include tablet-mb(30px);
+  @include mobile-mb(20px);
+}
+
+.technics__text {
+  @include max-width(1014px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 58px;
+
+  @include tablet-mb(40px);
+  @include mobile-mb(20px);
+}
+
+.technics__card {
+  @include max-width(300px);
+  background-color: white;
+  padding-top: 190px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  min-height: 409px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.technics__card-title {
+  margin-bottom: 19px;
+  min-height: 64px;
+  position: relative;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: $yellow;
+
+  @media (max-width: 650px) {
+    font-size: 28px !important;
+  }
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateY(-100%) translateX(-50%);
+  }
+}
+
+@for $i from 1 through 8 {
+  .technics__card-title_#{$i}::before {
+    content: url('/src/img/gallery/technics/#{$i}.jpg');
+  }
+}
+
+.technics__card-check {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.44;
+  margin-bottom: 15px;
+
+  @media (max-width: 650px) {
+    font-size: 28px !important;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  b {
+    font-size: 24px;
+  }
+}
+
+.technics__card-time {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.44;
+  margin-bottom: 0;
+  span {
+    font-weight: bold;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 28px !important;
+  }
+}

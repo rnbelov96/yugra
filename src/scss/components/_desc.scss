@@ -1,0 +1,152 @@
+.desc {
+  min-height: 847px;
+  @include bg;
+  background-image: url('/src/img/bgs/desc-bg.jpg');
+  padding-top: 45px;
+
+  @media (max-width: 650px) {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}
+
+.desc__title {
+  text-align: center;
+  font-size: 54px;
+  font-weight: bold;
+  letter-spacing: 1.35px;
+  margin-bottom: 23px;
+  text-transform: uppercase;
+  color: white;
+  @include mobile-mb(20px);
+
+  span.underline::after {
+    @media (max-width: 850px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 1150px) {
+    font-size: 45px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 650px) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.desc__subtitle {
+  @include max-width(948px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  margin-bottom: 35px;
+  font-size: 30px;
+  font-weight: bold;
+
+  @media (max-width: 1150px) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    color: $yellow;
+  }
+}
+
+.desc__text {
+  @include max-width(944px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.42;
+  margin-bottom: 47px;
+
+  @media (max-width: 991px) {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
+    color: white;
+  }
+}
+
+.desc__list {
+  @include reset-list;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+
+  @media (max-width: 650px) {
+    gap: 25px;
+    margin-bottom: 0;
+  }
+}
+
+.desc__item {
+  @include max-width(295px);
+  padding-left: 93px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @media (max-width: 650px) {
+    @include max-width(300px);
+  }
+
+  &:last-child {
+    @include max-width(265px);
+    @media (max-width: 650px) {
+      @include max-width(300px);
+    }
+  }
+
+  &::before {
+    position: absolute;
+    width: 126px;
+    height: 126px;
+    content: '';
+    left: -26px;
+    top: -17px;
+    @include bg;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      background-image: url('/src/img/icons/desc/#{$i}.png');
+    }
+  }
+}

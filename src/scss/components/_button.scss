@@ -1,0 +1,105 @@
+.button {
+  @include reset-btn;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 7px;
+  padding-right: 7px;
+  color: white;
+  font-weight: 700;
+  box-shadow: inset 0px -4px 0 0 rgba(0, 0, 0, 0.21);
+  background-image: linear-gradient(to right, #6ddff7, #c118c8);
+  border-radius: 8px;
+  @include max-width(322px);
+  min-height: 74px;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
+
+  &_desc {
+    display: none;
+    @media (max-width: 650px) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px;
+    }
+  }
+
+  &_calc {
+    max-width: 100%;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to right, #96e3f4, #ee5af4);
+  }
+
+  &:active {
+    background: #7147ac;
+    box-shadow: none;
+  }
+
+  &::after {
+    content: '';
+    margin-left: 60px;
+    width: 25px;
+    height: 300px;
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(#fff),
+      to(hsla(0, 0%, 100%, 0.01))
+    );
+    background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, 0.01));
+    -webkit-animation-delay: 0.05s;
+    animation-delay: 0.05s;
+    position: absolute;
+    left: -90px;
+    top: -150px;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-animation-name: slideme;
+    animation-name: slideme;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 0;
+  }
+
+  @-webkit-keyframes slideme {
+    0% {
+      left: -30px;
+      margin-left: 0;
+    }
+
+    30%,
+    to {
+      left: 110%;
+      margin-left: 80px;
+    }
+  }
+
+  @keyframes slideme {
+    0% {
+      left: -30px;
+      margin-left: 0;
+    }
+
+    30%,
+    to {
+      left: 110%;
+      margin-left: 80px;
+    }
+  }
+}

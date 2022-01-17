@@ -1,0 +1,122 @@
+.technics-slider {
+  @include max-width(980px);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-bottom: 25px;
+
+  @include tablet-mb(5px);
+  @include mobile-mb(0px);
+
+  @media (max-width: 1150px) {
+    @include max-width(715px);
+  }
+}
+
+.technics-slider__wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.technics-slider__img-box {
+  display: flex;
+  justify-content: space-between;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.technics-slider__img-item {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+
+  img {
+    pointer-events: none;
+  }
+}
+
+.technics-slider__nav-box {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  gap: 30px;
+
+  @media (max-width: 991px) {
+    justify-content: center;
+  }
+}
+
+.technics-slider__nav-item {
+  @include reset-btn;
+  width: 11px;
+  height: 11px;
+  background: #d9d9d9;
+  border-radius: 50%;
+
+  &_active {
+    background: #ff3364;
+  }
+}
+
+.technics-slider__btns-box {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  gap: 27px;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
+}
+
+.technics-slider__btn-next,
+.technics-slider__btn-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  @include reset-btn;
+  width: 44px;
+  height: 44px;
+  background-color: #f28a11;
+  box-shadow: 0px 11px 38px 0 rgba(255, 163, 3, 0.45);
+  border-radius: 10px;
+  @include bg;
+  background-size: 14px 21px;
+  background-image: url('/src/img/icons/slider-arrow.png');
+
+  &:hover,
+  &:focus {
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.9);
+  }
+}
+
+.technics-slider__btn-prev {
+  left: -60px;
+  transform: translateY(-50%) rotateY(180deg);
+  &:hover,
+  &:focus {
+    transform: scale(1.1) translateY(-50%) rotateY(180deg);
+  }
+
+  &:active {
+    transform: scale(0.9) translateY(-50%) rotateY(180deg);
+  }
+
+  @media (max-width: 1150px) {
+    left: -25px;
+  }
+}
+
+.technics-slider__btn-next {
+  right: -60px;
+
+  @media (max-width: 1150px) {
+    right: -25px; 
+  }
+}

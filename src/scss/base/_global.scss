@@ -1,0 +1,89 @@
+html p,
+li {
+  @media (max-width: 650px) {
+    font-size: 16px !important;
+  }
+}
+
+html h1,
+h2 {
+  @media (max-width: 650px) {
+    font-size: 22px !important;
+  }
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: 'GothamPro', sans-serif;
+  line-height: normal;
+}
+
+main {
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1144px;
+  margin: 0 auto;
+
+  @media (max-width: 1150px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 650px) {
+    padding: 0;
+    width: 300px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.rouble {
+  font-family: 'ALSRubl';
+  font-weight: 400;
+}
+
+.underline {
+  background-image: url('/src/img/rec.jpg');
+  background-repeat: repeat-x;
+  background-position-y: 0.89em;
+}
+
+.title-left-bottom-line,
+.title-left-top-line,
+.title-right-top-line,
+.title-right-bottom-line {
+  width: 40px;
+  height: 3px;
+  position: absolute;
+  background-color: $yellow;
+}
+
+.title-left-bottom-line {
+  left: 0px;
+  bottom: 0px;
+}
+.title-left-top-line {
+  left: 0px;
+  top: 0px;
+}
+.title-right-bottom-line {
+  right: 0px;
+  bottom: 0px;
+}
+.title-right-top-line {
+  right: 0px;
+  top: 0px;
+}
