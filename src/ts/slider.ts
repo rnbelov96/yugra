@@ -440,3 +440,24 @@ initSlider({
   withNav: false,
   changeModeBreakpoints: [650, 1150],
 });
+
+initSlider({
+  imagesLength: 5,
+  isFlexible: true,
+  maxMode: 2,
+  sliderSectionName: 'context-slider',
+  withButtons: true,
+  withNav: false,
+  changeModeBreakpoints: [650],
+});
+
+initSlider({
+  imagesLength: 4,
+  isFlexible: true,
+  maxMode: 2,
+  sliderSectionName: 'market-slider',
+  withButtons: true,
+  withNav: false,
+  changeModeBreakpoints: [650],
+});
+
