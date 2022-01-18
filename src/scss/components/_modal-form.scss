@@ -18,6 +18,16 @@
     }
   }
 
+  &_modal {
+    width: 98%;
+
+    @media (max-width: 650px) {
+      width: 92%;
+      position: relative;
+      left: -10px;
+    }
+  }
+
   @media (max-width: 650px) {
     padding: 20px;
   }
@@ -56,11 +66,27 @@
   @include max-width(323px);
   position: relative;
   border-bottom: 1px solid #a8a8a8;
+
+  &::before {
+    left: 0px;
+    width: 17px;
+    height: 22px;
+    @include bg;
+    content: '';
+    background-size: contain;
+    position: absolute;
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      background-image: url('/src/img/icons/form/#{$i}.png');
+    }
+  }
 }
 
 .modal-form__input {
   font-size: 16px;
-  padding-left: 32px;
+  padding-left: 28px;
   padding-bottom: 10px;
   background-color: transparent;
   border: none;

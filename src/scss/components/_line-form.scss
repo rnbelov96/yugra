@@ -88,11 +88,27 @@
   @media (max-width: 650px) {
     max-width: 300px;
   }
+
+  &::before {
+    left: 0px;
+    width: 17px;
+    height: 22px;
+    @include bg;
+    content: '';
+    background-size: contain;
+    position: absolute;
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      background-image: url('/src/img/icons/form/#{$i}.png')
+    } 
+  }
 }
 
 .line-form__input {
   font-size: 16px;
-  padding-left: 32px;
+  padding-left: 28px;
   padding-bottom: 10px;
   background-color: transparent;
   border: none;

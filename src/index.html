@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Франшиза «»</title>
+    <title>Франшиза услуг автотранспорта и спецтехники в аренду</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.5.2/validator.min.js"
       integrity="sha512-vZEoK8xRncku4g5GANHh5zobUjeCMbZkSEahrADeAcRlk/1Ignf8sAKojkV4RZLkPw145+ILJFisI2pnjsPtGQ=="
@@ -59,7 +59,7 @@
             владельцев спецтехники и правильно с ними договориться о
             сотрудничестве
           </p>
-          <button class="button button_desc">Получить информацию</button>
+          <button class="button button_desc js-present">Получить информацию</button>
           <ul class="desc__list">
             <li class="desc__item">
               От экскаватора до мини-погрузчика: у вас будут представлены все
@@ -685,7 +685,7 @@
                 ><span class="rouble">c</span>
               </b>
             </p>
-            <button class="button button_calc">Зафиксировать прибыль</button>
+            <button class="button button_calc js-fix">Зафиксировать прибыль</button>
             <div class="calc__img-box">
               <img src="./img/icons/calc-hands.png" class="calc__img" />
               <p class="calc__img-caption js-calc-result">200 000</p>
@@ -980,13 +980,11 @@
           <div class="join__text-box">
             <p class="join__text">
               Стратегия «СИТИТРАНССЕРВИС» ориентирована на заработок в B2B и B2C
-              одновременно. 
+              одновременно.
               <b>
-                Такой подход гарантирует вам быстрое достижение
-                плановых показателей, прочные позиции на рынке и стабильную
-                прибыль от 200&nbsp;000 до 1&nbsp;000&nbsp;000<span class="rouble"
-                  >c</span
-                >
+                Такой подход гарантирует вам быстрое достижение плановых
+                показателей, прочные позиции на рынке и стабильную прибыль от
+                200&nbsp;000 до 1&nbsp;000&nbsp;000<span class="rouble">c</span>
                 в месяц.
               </b>
             </p>
@@ -1046,15 +1044,93 @@
       </section>
     </main>
 
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__left-side">
+            <p class="footer__data">
+              © «СИТИТРАНССЕРВИС», 2017-2021 гг. <br />
+              ООО «СТС-Югра» <br />
+              ИНН 8602299618
+            </p>
+            <address class="footer__address">
+              Россия, Ханты-Мансийский автономный округ, г. Сургут
+            </address>
+          </div>
+          <img
+            src="./img/icons/logo.png"
+            width="86"
+            height="96"
+            alt="Логотип компании"
+            class="footer__logo"
+          />
+          <div class="footer__right-side">
+            <div class="footer__contact-box">
+              <a href="tel:+" class="footer__phone">+7 (996) 444-20-30</a
+              ><button class="footer__callback js-callback">
+                Бесплатный звонок
+              </button>
+            </div>
+            <a href="https://франчайзинг5.рф" target="_blank" class="footer__f5"
+              >Упаковка и продвижение <br />
+              франшиз: «Франчайзинг5»</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <div class="modal">
       <div class="modal__center-wrapper">
-        <form class="modal-form">
+        <form class="modal-form modal-form_modal">
           <h3 class="modal-form__title">
-            Оставьте заявку <span class="js-modal-form-title"></span>
+            <span class="js-modal-form-title"></span>
           </h3>
-          <button class="button button_modal-form js-modal-form-btn">
-            Получить документацию
-          </button>
+          <div class="modal-form__content">
+            <div class="modal-form__input-container">
+              <div class="modal-form__input-box">
+                <input
+                  type="tel"
+                  data-type="phone"
+                  placeholder="+7 (___) ___ ____"
+                  name="phone"
+                  class="modal-form__input"
+                />
+              </div>
+              <div class="modal-form__input-box">
+                <input
+                  type="email"
+                  data-type="email"
+                  placeholder="bestpartner@mail.ru"
+                  name=""
+                  class="modal-form__input"
+                />
+              </div>
+              <div class="modal-form__input-box">
+                <input
+                  type="text"
+                  data-type="name"
+                  placeholder="Имя Клиента"
+                  name="name"
+                  class="modal-form__input"
+                />
+              </div>
+            </div>
+            <button
+              class="button button_modal-form js-modal-form-btn"
+              type="submit"
+            >
+              Получить информацию
+            </button>
+          </div>
+          <p class="modal-form__policy">
+            Нажимая кнопку «<span class="js-modal-form-btn"></span>», я
+            подтверждаю, что ознакомлен и даю согласие на обработку персональных
+            данных на условиях и для целей, определяемых
+            <button class="js-policy" type="button">
+              Политикой конфиденциальности
+            </button>
+          </p>
           <button
             data-modal-close=""
             class="modal__close"
