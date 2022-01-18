@@ -42,6 +42,8 @@
     br {
       display: none;
     }
+    font-size: 21px !important;
+    line-height: 1.4;
   }
 }
 
@@ -123,6 +125,8 @@
 
   @media (max-width: 650px) {
     @include max-width(300px);
+    font-size: 15px !important;
+    padding-left: 80px;
   }
 
   &:last-child {
@@ -142,6 +146,12 @@
     @include bg;
     background-size: contain;
     z-index: -1;
+
+    @media (max-width: 650px) {
+      left: -34px;
+      top: -23px;
+      transform: scale(0.8);
+    }
   }
 
   @for $i from 1 through 3 {

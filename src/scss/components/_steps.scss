@@ -1,21 +1,22 @@
 .steps {
+  position: relative;
+  z-index: 1;
   background-color: #f2f3f4;
   min-height: 1257px;
   @include bg;
   background-image: url('/src/img/bgs/steps-bg.jpg');
   padding-top: 64px;
 
-  @media (max-width: 950px) {
-    background-position-x: -850px;
-  }
-
-  @media (max-width: 810px) {
-    background-position-x: -982px;
+  @media (max-width: 970px) {
+    padding-bottom: 582px;
+    background-size: 1546px;
+    background-position-y: bottom;
+    background-position-x: -46px;
   }
 
   @media (max-width: 650px) {
     padding-top: 30px;
-    background-image: none;
+    background-position-x: -205px;
   }
 }
 
@@ -99,6 +100,10 @@
   @include max-width(559px);
   margin-left: auto;
   margin-bottom: 10px;
+
+  @media (max-width: 970px) {
+    margin-right: auto;
+  }
 
   @media (max-width: 650px) {
     margin-bottom: 0;

@@ -12,6 +12,8 @@
     0px 0px 50px -7px rgba(0, 0, 0, 0.14);
 
   &_join {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     @media (max-width: 809px) {
       margin-left: auto;
       margin-right: auto;
@@ -41,6 +43,10 @@
 
   @media (max-width: 767px) {
     font-size: 22px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 19px;
   }
 }
 

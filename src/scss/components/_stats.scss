@@ -23,15 +23,12 @@
 
   @media (max-width: 650px) {
     min-height: auto;
-    padding-bottom: 30px;
-    padding-top: 75px;
-    background-image: none;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(217, 231, 248, 1) 100%
-    );
+    padding-top: 30px;
+    background-position-x: -197px;
+    background-size: 849px;
+    padding-bottom: 300px;
+    background-color: rgb(255, 255, 255);
+    background-image: url('/src/img/bgs/stats-bg.jpg'),
   }
 }
 
