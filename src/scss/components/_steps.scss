@@ -46,13 +46,14 @@
 }
 
 .steps__list {
+  @include reset-list;
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 45px;
   gap: 25px;
 
-  @include reset-list;
   @include tablet-mb(35px);
   @include mobile-mb(20px);
 }

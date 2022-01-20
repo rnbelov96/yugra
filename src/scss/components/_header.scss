@@ -52,12 +52,12 @@
 }
 
 .header__phone {
+  @include reset-link(black);
+
   margin-bottom: 5px;
   color: black;
   font-size: 26px;
   font-weight: bold;
-
-  @include reset-link(black);
 
   @media (max-width: 650px) {
     font-size: 18px;

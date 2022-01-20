@@ -59,13 +59,14 @@
 }
 
 .deals__list {
+  @include reset-list;
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 47px;
   gap: 38px;
 
-  @include reset-list;
   @include tablet-mb(35px);
   @include mobile-mb(20px);
 }

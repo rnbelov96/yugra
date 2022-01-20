@@ -103,6 +103,7 @@
     content: '';
 
     @include bg;
+    background-size: contain;
   }
 
   @for $i from 1 through 3 {

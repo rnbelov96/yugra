@@ -39,11 +39,9 @@
 }
 
 .thanks {
-  flex: 1 0 auto;
-}
-
-.thanks__content {
   @include bg;
+
+  flex: 1 0 auto;
 
   background-image: url('/src/img/bgs/thanks-bg.jpg');
 }

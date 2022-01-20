@@ -2,11 +2,9 @@
   @include reset-btn;
 
   position: relative;
-  display: flex;
-  overflow: hidden;
   min-height: 74px;
-  align-items: center;
-  justify-content: center;
+  line-height: 74px;
+  overflow: hidden;
   padding-right: 7px;
   padding-left: 7px;
   background-image: linear-gradient(to right, #6ddff7, #c118c8);
