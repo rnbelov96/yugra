@@ -75,6 +75,9 @@
 
 .technics-slider__btn-next,
 .technics-slider__btn-prev {
+  @include reset-btn;
+  @include bg;
+
   position: absolute;
   top: 50%;
   width: 44px;
@@ -85,9 +88,6 @@
   border-radius: 10px;
   box-shadow: 0 11px 38px 0 rgba(255, 163, 3, 0.45);
   transform: translateY(-50%);
-
-  @include reset-btn;
-  @include bg;
 
   &:hover,
   &:focus {
