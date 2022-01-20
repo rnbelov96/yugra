@@ -1,8 +1,9 @@
 .desc {
   min-height: 847px;
-  @include bg;
-  background-image: url('/src/img/bgs/desc-bg.jpg');
   padding-top: 45px;
+  background-image: url('/src/img/bgs/desc-bg.jpg');
+
+  @include bg;
 
   @media (max-width: 650px) {
     padding-top: 20px;
@@ -11,13 +12,14 @@
 }
 
 .desc__title {
-  text-align: center;
+  margin-bottom: 23px;
+  color: white;
   font-size: 54px;
   font-weight: bold;
   letter-spacing: 1.35px;
-  margin-bottom: 23px;
+  text-align: center;
   text-transform: uppercase;
-  color: white;
+
   @include mobile-mb(20px);
 
   span.underline::after {
@@ -42,6 +44,7 @@
     br {
       display: none;
     }
+
     font-size: 21px !important;
     line-height: 1.4;
   }
@@ -49,27 +52,28 @@
 
 .desc__subtitle {
   @include max-width(948px);
-  margin-left: auto;
+
   margin-right: auto;
-  text-align: center;
-  color: white;
   margin-bottom: 35px;
+  margin-left: auto;
+  color: white;
   font-size: 30px;
   font-weight: bold;
+  text-align: center;
 
   @media (max-width: 1150px) {
-    font-size: 28px;
     margin-bottom: 30px;
+    font-size: 28px;
   }
 
   @media (max-width: 991px) {
-    font-size: 25px;
     margin-bottom: 25px;
+    font-size: 25px;
   }
 
   @media (max-width: 767px) {
-    font-size: 22px;
     margin-bottom: 20px;
+    font-size: 22px;
   }
 
   span {
@@ -79,21 +83,22 @@
 
 .desc__text {
   @include max-width(944px);
-  margin-left: auto;
+
   margin-right: auto;
-  text-align: center;
+  margin-bottom: 47px;
+  margin-left: auto;
   font-size: 24px;
   line-height: 1.42;
-  margin-bottom: 47px;
+  text-align: center;
 
   @media (max-width: 991px) {
-    font-size: 22px;
     margin-bottom: 30px;
+    font-size: 22px;
   }
 
   @media (max-width: 767px) {
-    font-size: 20px;
     margin-bottom: 25px;
+    font-size: 20px;
   }
 
   @media (max-width: 650px) {
@@ -104,33 +109,37 @@
 
 .desc__list {
   @include reset-list;
+
   display: flex;
-  gap: 50px;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 25px;
+  gap: 50px;
 
   @media (max-width: 650px) {
-    gap: 25px;
     margin-bottom: 0;
+    gap: 25px;
   }
 }
 
 .desc__item {
   @include max-width(295px);
-  padding-left: 93px;
+
   position: relative;
+  padding-left: 93px;
   font-size: 16px;
   line-height: 1.5;
 
   @media (max-width: 650px) {
     @include max-width(300px);
-    font-size: 15px !important;
+
     padding-left: 80px;
+    font-size: 15px !important;
   }
 
   &:last-child {
     @include max-width(265px);
+
     @media (max-width: 650px) {
       @include max-width(300px);
     }
@@ -138,18 +147,19 @@
 
   &::before {
     position: absolute;
+    z-index: -1;
+    top: -17px;
+    left: -26px;
     width: 126px;
     height: 126px;
-    content: '';
-    left: -26px;
-    top: -17px;
-    @include bg;
     background-size: contain;
-    z-index: -1;
+    content: '';
+
+    @include bg;
 
     @media (max-width: 650px) {
-      left: -34px;
       top: -23px;
+      left: -34px;
       transform: scale(0.8);
     }
   }

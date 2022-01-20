@@ -1,11 +1,13 @@
 .join {
   padding-top: 70px;
+
   @include bg;
+
   background-image: url('/src/img/bgs/join-bg.jpg');
 
   @media (max-width: 1046px) {
-    background-position-x: -375px;
     padding-top: 50px;
+    background-position-x: -375px;
   }
 
   @media (max-width: 809px) {
@@ -13,18 +15,18 @@
   }
 
   @media (max-width: 650px) {
-  padding-top: 30px;
+    padding-top: 30px;
   }
 }
 
 .join__title {
-  text-align: center;
+  margin-bottom: 20px;
+  color: white;
   font-size: 54px;
   font-weight: bold;
   letter-spacing: 1.35px;
-  margin-bottom: 20px;
+  text-align: center;
   text-transform: uppercase;
-  color: white;
 
   @media (max-width: 1150px) {
     font-size: 45px;
@@ -41,46 +43,48 @@
 
 .join__subtitle {
   @include max-width(900px);
-  margin-left: auto;
+
   margin-right: auto;
-  font-weight: bold;
-  text-align: center;
+  margin-bottom: 48px;
+  margin-left: auto;
   color: white;
   font-size: 30px;
-  margin-bottom: 48px;
+  font-weight: bold;
+  text-align: center;
 
   @media (max-width: 1150px) {
-    font-size: 28px;
     margin-bottom: 30px;
+    font-size: 28px;
   }
 
   @media (max-width: 991px) {
-    font-size: 25px;
     margin-bottom: 25px;
+    font-size: 25px;
   }
 
   @media (max-width: 767px) {
-    font-size: 22px;
     margin-bottom: 20px;
+    font-size: 22px;
   }
 }
 
 .join__text-box {
   @include max-width(997px);
-  margin-left: auto;
+
   margin-right: auto;
   margin-bottom: 40px;
+  margin-left: auto;
 
   @include tablet-mb(30px);
   @include mobile-mb(20px);
 }
 
 .join__text {
+  margin-bottom: 30px;
+  color: white;
   font-size: 20px;
   line-height: 1.4;
-  margin-bottom: 30px;
   text-align: center;
-  color: white;
 
   &:last-child {
     margin-bottom: 0;

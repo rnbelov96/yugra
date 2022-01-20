@@ -1,10 +1,11 @@
 .info {
   min-height: 1347px;
-  background-color: #282d54;
-  @include bg;
-  background-image: url('/src/img/bgs/info-bg.jpg');
   padding-top: 112px;
   padding-bottom: 100px;
+  background-color: #282d54;
+  background-image: url('/src/img/bgs/info-bg.jpg');
+
+  @include bg;
 
   @media (max-width: 991px) {
     padding-top: 70px;
@@ -13,8 +14,8 @@
   }
 
   @media (max-width: 890px) {
-    background-image: none;
     min-height: auto;
+    background-image: none;
   }
 
   @media (max-width: 650px) {
@@ -25,9 +26,10 @@
 
 .info__title {
   @include title;
-  text-align: center;
-  color: white;
+
   margin-bottom: 38px;
+  color: white;
+  text-align: center;
 
   span {
     color: $yellow;
@@ -40,25 +42,29 @@
 
 .info__list {
   @include reset-list;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
   margin-bottom: 46px;
+  gap: 15px;
+
   @include tablet-mb(40px);
   @include mobile-mb(20px);
 }
 
 .info__item {
   padding: 35px;
-  font-size: 18px;
-  @include max-width(325px);
   background-color: #f2f3f4;
-  line-height: 1.44;
+  font-size: 18px;
   font-weight: bold;
+  line-height: 1.44;
+
+  @include max-width(325px);
 
   @media (max-width: 650px) {
     padding: 15px;
+
     br {
       display: none;
     }
@@ -67,6 +73,7 @@
 
 .info__text-box {
   margin-bottom: 46px;
+
   @include tablet-mb(40px);
   @include mobile-mb(20px);
 }
@@ -84,32 +91,33 @@
 
 .info__note {
   min-height: 118px;
-  padding-left: 193px;
-  padding-right: 40px;
   padding-top: 35px;
+  padding-right: 40px;
   padding-bottom: 35px;
+  padding-left: 193px;
   margin-bottom: 45px;
+  background-image: url('/src/img/info-note-bg.jpg');
+  background-position-x: left;
   color: white;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.5;
+
   @include bg;
-  background-position-x: left;
-  background-image: url('/src/img/info-note-bg.jpg');
   @include tablet-mb(40px);
   @include mobile-mb(20px);
 
   @media (max-width: 730px) {
-    background-size: 578px;
-    background-color: $yellow;
-    padding-left: 150px;
     padding-right: 20px;
+    padding-left: 150px;
+    background-color: $yellow;
+    background-size: 578px;
   }
 
   @media (max-width: 650px) {
-    padding-left: 84px;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 84px;
     background-position-x: -4px;
     background-size: 361px;
   }
@@ -117,35 +125,38 @@
 
 .info__note-text {
   @include max-width(623px);
+
+  margin-bottom: 53px;
+  color: $yellow;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.5;
-  color: $yellow;
-  margin-bottom: 53px;
+
   @include tablet-mb(40px);
   @include mobile-mb(20px);
 }
 
 .info__income {
-  background-color: #f2f3f4;
+  position: relative;
   padding-top: 40px;
-  padding-bottom: 40px;
   padding-right: 123px;
+  padding-bottom: 40px;
+  padding-left: 240px;
+  margin-bottom: 0;
+  background-color: #f2f3f4;
   font-size: 20px;
   text-align: center;
-  padding-left: 240px;
-  position: relative;
-  margin-bottom: 0;
 
   &::before {
     position: absolute;
+    left: 148px;
     width: 70px;
     height: 70px;
     background-image: url('/src/img/icons/info-icon.png');
     content: '';
+
     @include bg;
     @include y-align;
-    left: 148px;
 
     @media (max-width: 880px) {
       content: none;
@@ -153,9 +164,9 @@
   }
 
   span {
+    color: $yellow;
     font-size: 36px;
     font-weight: bold;
-    color: $yellow;
 
     @media (max-width: 650px) {
       font-size: 25px;
@@ -177,7 +188,7 @@
   @media (max-width: 650px) {
     display: block;
     width: 100%;
-    margin-bottom: -170px;
     margin-top: -106px;
+    margin-bottom: -170px;
   }
 }

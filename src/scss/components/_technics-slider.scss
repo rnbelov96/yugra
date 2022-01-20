@@ -1,12 +1,13 @@
 .technics-slider {
   @include max-width(980px);
-  margin-left: auto;
-  margin-right: auto;
+
   position: relative;
+  margin-right: auto;
   margin-bottom: 25px;
+  margin-left: auto;
 
   @include tablet-mb(5px);
-  @include mobile-mb(0px);
+  @include mobile-mb(0);
 
   @media (max-width: 1150px) {
     @include max-width(715px);
@@ -14,8 +15,8 @@
 }
 
 .technics-slider__wrapper {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -37,9 +38,9 @@
 }
 
 .technics-slider__nav-box {
+  position: relative;
   display: flex;
   justify-content: flex-start;
-  position: relative;
   gap: 30px;
 
   @media (max-width: 991px) {
@@ -49,6 +50,7 @@
 
 .technics-slider__nav-item {
   @include reset-btn;
+
   width: 11px;
   height: 11px;
   background: #d9d9d9;
@@ -60,10 +62,10 @@
 }
 
 .technics-slider__btns-box {
-  display: flex;
   position: absolute;
-  right: 10px;
   top: 10px;
+  right: 10px;
+  display: flex;
   gap: 27px;
 
   @media (max-width: 650px) {
@@ -75,16 +77,17 @@
 .technics-slider__btn-prev {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  @include reset-btn;
   width: 44px;
   height: 44px;
   background-color: #f28a11;
-  box-shadow: 0px 11px 38px 0 rgba(255, 163, 3, 0.45);
-  border-radius: 10px;
-  @include bg;
-  background-size: 14px 21px;
   background-image: url('/src/img/icons/slider-arrow.png');
+  background-size: 14px 21px;
+  border-radius: 10px;
+  box-shadow: 0 11px 38px 0 rgba(255, 163, 3, 0.45);
+  transform: translateY(-50%);
+
+  @include reset-btn;
+  @include bg;
 
   &:hover,
   &:focus {
@@ -99,6 +102,7 @@
 .technics-slider__btn-prev {
   left: -60px;
   transform: translateY(-50%) rotateY(180deg);
+
   &:hover,
   &:focus {
     transform: scale(1.1) translateY(-50%) rotateY(180deg);
@@ -117,6 +121,6 @@
   right: -60px;
 
   @media (max-width: 1150px) {
-    right: -25px; 
+    right: -25px;
   }
 }

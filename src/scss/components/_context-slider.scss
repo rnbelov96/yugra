@@ -1,8 +1,9 @@
 .context-slider {
   @include max-width(446px);
-  margin-left: auto;
-  margin-right: auto;
+
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .context-slider__wrapper {
@@ -23,17 +24,18 @@
   flex-shrink: 0;
 
   img {
-    pointer-events: none;
-    @include max-width(204px);
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    pointer-events: none;
+
+    @include max-width(204px);
   }
 }
 
 .context-slider__nav-box {
+  position: relative;
   display: flex;
   justify-content: flex-start;
-  position: relative;
   gap: 30px;
 
   @media (max-width: 991px) {
@@ -43,6 +45,7 @@
 
 .context-slider__nav-item {
   @include reset-btn;
+
   width: 11px;
   height: 11px;
   background: #d9d9d9;
@@ -54,10 +57,10 @@
 }
 
 .context-slider__btns-box {
-  display: flex;
   position: absolute;
-  right: 10px;
   top: 10px;
+  right: 10px;
+  display: flex;
   gap: 27px;
 
   @media (max-width: 650px) {
@@ -69,16 +72,17 @@
 .context-slider__btn-prev {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  @include reset-btn;
   width: 44px;
   height: 44px;
   background-color: #f28a11;
-  box-shadow: 0px 11px 38px 0 rgba(255, 163, 3, 0.45);
-  border-radius: 10px;
-  @include bg;
-  background-size: 14px 21px;
   background-image: url('/src/img/icons/slider-arrow.png');
+  background-size: 14px 21px;
+  border-radius: 10px;
+  box-shadow: 0 11px 38px 0 rgba(255, 163, 3, 0.45);
+  transform: translateY(-50%);
+
+  @include reset-btn;
+  @include bg;
 
   &:hover,
   &:focus {
@@ -93,6 +97,7 @@
 .context-slider__btn-prev {
   left: -48px;
   transform: translateY(-50%) rotateY(180deg);
+
   &:hover,
   &:focus {
     transform: scale(1.1) translateY(-50%) rotateY(180deg);
@@ -111,6 +116,6 @@
   right: -48px;
 
   @media (max-width: 1150px) {
-    right: -5px; 
+    right: -5px;
   }
 }

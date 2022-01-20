@@ -1,26 +1,28 @@
 .canals {
+  min-height: 1407px;
   padding-top: 120px;
   padding-bottom: 88px;
-  min-height: 1407px;
-  @include bg;
   background-image: url('/src/img/bgs/canals-bg.jpg');
+
+  @include bg;
 
   @media (max-width: 1150px) {
     padding-bottom: 50px;
   }
 
   @media (max-width: 650px) {
-    padding-bottom: 30px;
     padding-top: 80px;
+    padding-bottom: 30px;
   }
 }
 
 .canals__title {
   @include title;
   @include max-width(1011px);
-  margin-left: auto;
+
   margin-right: auto;
   margin-bottom: 50px;
+  margin-left: auto;
   color: white;
   text-align: center;
 
@@ -30,11 +32,12 @@
 
 .canals__list {
   @include reset-list;
+
   display: flex;
-  gap: 36px;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 58px;
+  gap: 36px;
 
   @include tablet-mb(40px);
   @include mobile-mb(20px);
@@ -48,27 +51,27 @@
   position: relative;
   z-index: -1;
   top: -42px;
-  margin-bottom: -42px;
-  background-color: white;
+  min-height: 494px;
   padding-top: 90px;
-  padding-left: 47px;
   padding-right: 47px;
   padding-bottom: 35px;
-  min-height: 494px;
+  padding-left: 47px;
+  margin-bottom: -42px;
+  background-color: white;
 
   @media (max-width: 650px) {
+    min-height: auto;
     padding-top: 70px;
-    padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 26px;
-    min-height: auto;
+    padding-left: 25px;
   }
 }
 
 .canals__item-title {
+  color: $yellow;
   font-size: 36px;
   font-weight: bold;
-  color: $yellow;
 
   @media (max-width: 991px) {
     font-size: 32px;
@@ -84,9 +87,9 @@
 }
 
 .canals__item-text {
+  margin-bottom: 27px;
   font-size: 18px;
   line-height: 1.44;
-  margin-bottom: 27px;
 
   @include mobile-mb(20px);
 
@@ -96,12 +99,13 @@
 }
 
 .canals__note {
-  color: white;
-  margin-bottom: 0;
-  @include max-width(953px);
-  margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: auto;
+  color: white;
   font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+
+  @include max-width(953px);
 }

@@ -34,8 +34,8 @@ main {
   }
 
   @media (max-width: 650px) {
-    padding: 0;
     width: 300px;
+    padding: 0;
   }
 }
 
@@ -57,33 +57,36 @@ main {
 
 .underline {
   background-image: url('/src/img/rec.jpg');
-  background-repeat: repeat-x;
   background-position-y: 0.89em;
+  background-repeat: repeat-x;
 }
 
 .title-left-bottom-line,
 .title-left-top-line,
 .title-right-top-line,
 .title-right-bottom-line {
+  position: absolute;
   width: 40px;
   height: 3px;
-  position: absolute;
   background-color: $yellow;
 }
 
 .title-left-bottom-line {
-  left: 0px;
-  bottom: 0px;
+  bottom: 0;
+  left: 0;
 }
+
 .title-left-top-line {
-  left: 0px;
-  top: 0px;
+  top: 0;
+  left: 0;
 }
+
 .title-right-bottom-line {
-  right: 0px;
-  bottom: 0px;
+  right: 0;
+  bottom: 0;
 }
+
 .title-right-top-line {
-  right: 0px;
-  top: 0px;
+  top: 0;
+  right: 0;
 }

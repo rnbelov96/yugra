@@ -23,12 +23,13 @@
 
 .footer__logo {
   position: absolute;
+
   @include central-align;
 
   @media (max-width: 1150px) {
     position: relative;
-    left: 0px;
-    top: 0px;
+    top: 0;
+    left: 0;
     transform: none;
   }
 
@@ -40,9 +41,9 @@
 
 .footer__data,
 .footer__address {
+  margin-bottom: 0;
   font-size: 14px;
   line-height: 1.71;
-  margin-bottom: 0;
 
   @media (max-width: 910px) {
     text-align: center;
@@ -54,18 +55,19 @@
 }
 
 .footer__address {
-  padding-left: 40px;
   position: relative;
+  padding-left: 40px;
 
   &::before {
-    left: 0px;
-    @include y-align;
     position: absolute;
-    content: '';
+    left: 0;
     width: 32px;
     height: 22px;
-    @include bg;
     background-image: url('/src/img/icons/gerb.png');
+    content: '';
+
+    @include y-align;
+    @include bg;
   }
 
   @media (max-width: 650px) {
@@ -89,10 +91,11 @@
 }
 
 .footer__phone {
-  font-size: 26px;
-  font-weight: bold;
   margin-bottom: 5px;
   color: black;
+  font-size: 26px;
+  font-weight: bold;
+
   @include reset-link(black);
 
   @media (max-width: 650px) {
@@ -102,23 +105,24 @@
 
 .footer__callback {
   @include reset-btn;
+
+  margin-bottom: 13px;
   color: #f34648;
   font-size: 14px;
   text-decoration: underline;
-  margin-bottom: 13px;
 }
 
 .footer__f5 {
+  position: relative;
+  padding-left: 55px;
+  color: black;
   font-size: 14px;
   line-height: 1.71;
-  color: black;
-  padding-left: 55px;
-  position: relative;
 
   &::before {
-    left: 0px;
-    top: -2px;
     position: absolute;
+    top: -2px;
+    left: 0;
     content: url('/src/img/icons/f5.svg');
   }
 }

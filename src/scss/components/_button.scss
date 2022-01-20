@@ -1,21 +1,23 @@
 .button {
   @include reset-btn;
-  font-size: 20px;
-  text-align: center;
+
+  position: relative;
   display: flex;
-  justify-content: center;
+  overflow: hidden;
+  min-height: 74px;
   align-items: center;
-  padding-left: 7px;
+  justify-content: center;
   padding-right: 7px;
-  color: white;
-  font-weight: 700;
-  box-shadow: inset 0px -4px 0 0 rgba(0, 0, 0, 0.21);
+  padding-left: 7px;
   background-image: linear-gradient(to right, #6ddff7, #c118c8);
   border-radius: 8px;
+  box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.21);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+
   @include max-width(322px);
-  min-height: 74px;
-  overflow: hidden;
-  position: relative;
 
   @media (max-width: 650px) {
     font-size: 16px;
@@ -23,11 +25,12 @@
 
   &_desc {
     display: none;
+
     @media (max-width: 650px) {
       display: block;
-      margin-left: auto;
       margin-right: auto;
       margin-bottom: 15px;
+      margin-left: auto;
     }
   }
 
@@ -35,7 +38,8 @@
     max-width: 100%;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: linear-gradient(to right, #96e3f4, #ee5af4);
   }
 
@@ -44,37 +48,74 @@
     box-shadow: none;
   }
 
+  @media screen and (prefers-reduced-motion: reduce) {
+    &::after {
+      position: absolute;
+      z-index: 0;
+      top: -150px;
+      left: -90px;
+      width: 25px;
+      height: 300px;
+      margin-left: 60px;
+      animation: none;
+      -webkit-animation-delay: 0.05s;
+      animation-delay: 0.05s;
+      -webkit-animation-duration: 4s;
+      animation-duration: 4s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-name: slideme;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      background:
+        -webkit-gradient(
+          linear,
+          left bottom,
+          left top,
+          from(#fff),
+          to(hsla(0, 0%, 100%, 0.01))
+        );
+      background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, 0.01));
+      content: '';
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-transition: all 0.3s;
+      transition: none;
+    }
+  }
+
   &::after {
-    content: '';
-    margin-left: 60px;
+    position: absolute;
+    z-index: 0;
+    top: -150px;
+    left: -90px;
     width: 25px;
     height: 300px;
-    background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(#fff),
-      to(hsla(0, 0%, 100%, 0.01))
-    );
-    background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, 0.01));
+    margin-left: 60px;
     -webkit-animation-delay: 0.05s;
     animation-delay: 0.05s;
-    position: absolute;
-    left: -90px;
-    top: -150px;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-animation-name: slideme;
-    animation-name: slideme;
     -webkit-animation-duration: 4s;
     animation-duration: 4s;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+    -webkit-animation-name: slideme;
+    animation-name: slideme;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    background:
+      -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        from(#fff),
+        to(hsla(0, 0%, 100%, 0.01))
+      );
+    background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, 0.01));
+    content: '';
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    z-index: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
   }
 
   @-webkit-keyframes slideme {

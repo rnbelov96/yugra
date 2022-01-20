@@ -1,7 +1,9 @@
 .main {
   min-height: 1177px;
   padding-top: 70px;
+
   @include bg;
+
   background-image: url('/src/img/bgs/main-bg.jpg');
 
   @media (max-width: 991px) {
@@ -16,10 +18,11 @@
 .main__title {
   @include max-width(1119px);
   @include title;
-  margin-bottom: 40px;
-  text-align: center;
-  margin-left: auto;
+
   margin-right: auto;
+  margin-bottom: 40px;
+  margin-left: auto;
+  text-align: center;
 
   @include tablet-mb(30px);
   @include mobile-mb(20px);
@@ -35,6 +38,7 @@
 
 .main__content {
   @include max-width(647px);
+
   margin-left: auto;
 
   @media (max-width: 846px) {
@@ -43,19 +47,20 @@
 }
 
 .main__text-caption {
-  font-size: 86px;
-  color: white;
-  margin-bottom: 0;
-  font-weight: bold;
-  text-align: right;
-  span {
-    color: $yellow;
-  }
   position: absolute;
   top: 195px;
   left: -439px;
-  transform: rotateZ(270deg);
+  margin-bottom: 0;
+  color: white;
+  font-size: 86px;
+  font-weight: bold;
   line-height: 1;
+  text-align: right;
+  transform: rotateZ(270deg);
+
+  span {
+    color: $yellow;
+  }
 
   @media (max-width: 910px) {
     left: -375px;
@@ -67,17 +72,17 @@
 }
 
 .main__text-box {
-  margin-bottom: 34px;
   position: relative;
+  margin-bottom: 34px;
 
   @include tablet-mb(30px);
   @include mobile-mb(20px);
 }
 
 .main__text {
+  margin-bottom: 27px;
   font-size: 18px;
   line-height: 1.44;
-  margin-bottom: 27px;
 
   &:last-child {
     margin-bottom: 0;
@@ -87,23 +92,24 @@
 }
 
 .main__note {
-  padding-left: 230px;
   padding-top: 30px;
-  padding-bottom: 30px;
   padding-right: 28px;
+  padding-bottom: 30px;
+  padding-left: 230px;
   margin-bottom: -4px;
   background-color: #282d54;
-  @include bg;
-  background-position-x: left;
   background-image: url('/src/img/main-note-bg.jpg');
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1.5;
+  background-position-x: left;
   color: white;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+
+  @include bg;
 
   @media (max-width: 650px) {
-    background-image: none;
     padding: 20px;
+    background-image: none;
   }
 
   span {

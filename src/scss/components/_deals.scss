@@ -1,9 +1,10 @@
 .deals {
   min-height: 1113px;
-  @include bg;
-  background-image: url('/src/img/bgs/deals-bg.jpg');
   padding-top: 126px;
   padding-bottom: 57px;
+  background-image: url('/src/img/bgs/deals-bg.jpg');
+
+  @include bg;
 
   @media (max-width: 1029px) {
     padding-bottom: 0;
@@ -17,25 +18,26 @@
 .deals__title {
   @include title;
   @include max-width(570px);
-  margin-left: 400px;
+
   position: relative;
   margin-bottom: 67px;
+  margin-left: 400px;
 
   @include tablet-mb(40px);
   @include mobile-mb(20px);
 
   @media (max-width: 1029px) {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     text-align: center;
   }
 
   &::before {
-    content: url('/src/img/card-deals.png');
     position: absolute;
-    left: -766px;
-    top: 0px;
     z-index: -1;
+    top: 0;
+    left: -766px;
+    content: url('/src/img/card-deals.png');
 
     @media (max-width: 1150px) {
       left: -724px;
@@ -48,32 +50,34 @@
 }
 
 .deals__text {
+  margin-bottom: 26px;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 26px;
+
   @include mobile-mb(20px);
 }
 
 .deals__list {
   display: flex;
-  @include reset-list;
-  gap: 38px;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 47px;
+  gap: 38px;
 
+  @include reset-list;
   @include tablet-mb(35px);
   @include mobile-mb(20px);
 }
 
 .deals__item {
   @include max-width(355px);
-  background-color: #282d54;
+
   padding-top: 39px;
-  padding-left: 24px;
   padding-right: 15px;
   padding-bottom: 35px;
+  padding-left: 24px;
+  background-color: #282d54;
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) .deals__item-title::before {
@@ -83,27 +87,28 @@
 }
 
 .deals__item-title {
-  padding-left: 102px;
   position: relative;
+  padding-left: 102px;
+  margin-bottom: 45px;
+  color: $yellow;
   font-size: 34px;
   font-weight: bold;
-  color: $yellow;
-  margin-bottom: 45px;
 
   @media (max-width: 650px) {
-    font-size: 26px !important;
     padding-left: 88px;
     margin-bottom: 27px;
+    font-size: 26px !important;
   }
 
   &::before {
-    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
     width: 70px;
     height: 70px;
+    content: '';
+
     @include bg;
-    position: absolute;
-    left: 0px;
-    top: 6px;
 
     @media (max-width: 650px) {
       top: -10px;
@@ -112,10 +117,10 @@
 }
 
 .deals__item-percent {
+  margin-bottom: 24px;
+  color: $yellow;
   font-size: 24px;
   font-weight: bold;
-  color: $yellow;
-  margin-bottom: 24px;
 
   b {
     font-size: 36px;
@@ -123,58 +128,58 @@
 }
 
 .deals__item-text {
+  margin-bottom: 24px;
+  color: white;
   font-size: 18px;
   line-height: 1.44;
-  color: white;
-  margin-bottom: 24px;
 }
 
 .deals__item-check {
-  font-size: 18px;
   margin-bottom: 24px;
-  line-height: 1.44;
   color: white;
+  font-size: 18px;
+  line-height: 1.44;
 
   b {
-    font-weight: bold;
     font-size: 24px;
+    font-weight: bold;
   }
 }
 
 .deals__item-cells {
-  font-size: 18px;
-  margin-bottom: 0px;
-  line-height: 1.44;
+  margin-bottom: 0;
   color: white;
+  font-size: 18px;
+  line-height: 1.44;
 
   b {
-    font-weight: bold;
     font-size: 24px;
+    font-weight: bold;
   }
 }
 
 .deals__note {
-  text-align: center;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 1.5;
   margin-bottom: 0;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .deals__img {
-  display: block;
   position: absolute;
   z-index: -1;
   top: 52px;
   right: -1012px;
+  display: block;
 
   @media (max-width: 1029px) {
-    top: 0px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    right: 0;
     position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
     margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

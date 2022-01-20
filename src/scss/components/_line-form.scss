@@ -1,14 +1,14 @@
 .line-form {
-  background-color: white;
-  border-radius: 20px;
   padding-top: 37px;
-  padding-left: 51px;
   padding-right: 51px;
   padding-bottom: 28px;
+  padding-left: 51px;
+  background-color: white;
+  border-radius: 20px;
 
   @media (max-width: 1150px) {
-    padding-left: 30px;
     padding-right: 30px;
+    padding-left: 30px;
   }
 
   &_desc {
@@ -23,14 +23,14 @@
   &_steps {
     position: relative;
     top: 35px;
-    box-shadow: 0px 17px 103px 0 rgba(31, 46, 124, 0.09);
+    box-shadow: 0 17px 103px 0 rgba(31, 46, 124, 0.09);
   }
 }
 
 .line-form__title {
+  margin-bottom: 27px;
   font-size: 30px;
   font-weight: bold;
-  margin-bottom: 27px;
   text-align: center;
 
   @media (max-width: 1150px) {
@@ -53,9 +53,9 @@
 .line-form__content {
   display: flex;
   align-items: center;
-  gap: 38px;
   justify-content: space-between;
   margin-bottom: 38px;
+  gap: 38px;
 
   @media (max-width: 1150px) {
     gap: 15px;
@@ -69,9 +69,9 @@
 
 .line-form__input-container {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  width: 100%;
   gap: 38px;
 
   @media (max-width: 1150px) {
@@ -86,6 +86,7 @@
 
 .line-form__input-box {
   @include max-width(203px);
+
   position: relative;
   border-bottom: 1px solid #a8a8a8;
 
@@ -94,29 +95,30 @@
   }
 
   &::before {
-    left: 0px;
+    position: absolute;
+    left: 0;
     width: 17px;
     height: 22px;
-    @include bg;
-    content: '';
     background-size: contain;
-    position: absolute;
+    content: '';
+
+    @include bg;
   }
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i})::before {
-      background-image: url('/src/img/icons/form/#{$i}.png')
-    } 
+      background-image: url('/src/img/icons/form/#{$i}.png');
+    }
   }
 }
 
 .line-form__input {
-  font-size: 16px;
-  padding-left: 28px;
-  padding-bottom: 10px;
-  background-color: transparent;
-  border: none;
   width: 100%;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
   outline: none;
 
   &::-webkit-input-placeholder {
@@ -142,13 +144,14 @@
 
 .line-form__policy {
   @include max-width(798px);
+
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  color: #a8a8a8;
   font-size: 12px;
   line-height: 1.33;
-  margin-bottom: 0;
-  color: #a8a8a8;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 
   @media (max-width: 650px) {
     font-size: 12px !important;
@@ -156,6 +159,7 @@
 
   button {
     @include reset-btn;
+
     color: #a8a8a8;
 
     &:hover,

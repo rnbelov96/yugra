@@ -1,7 +1,8 @@
 .technics {
   @include bg;
-  background-image: url('/src/img/bgs/technics-bg.jpg');
+
   padding-top: 64px;
+  background-image: url('/src/img/bgs/technics-bg.jpg');
 
   @media (max-width: 650px) {
     padding-top: 30px;
@@ -12,11 +13,12 @@
 .technics__title {
   @include title;
   @include max-width(986px);
-  margin-left: auto;
+
   margin-right: auto;
   margin-bottom: 38px;
-  text-align: center;
+  margin-left: auto;
   color: white;
+  text-align: center;
 
   @include tablet-mb(30px);
   @include mobile-mb(20px);
@@ -24,14 +26,15 @@
 
 .technics__text {
   @include max-width(1014px);
-  margin-left: auto;
+
   margin-right: auto;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 1.5;
   margin-bottom: 58px;
+  margin-left: auto;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
 
   @include tablet-mb(40px);
   @include mobile-mb(20px);
@@ -39,28 +42,29 @@
 
 .technics__card {
   @include max-width(300px);
-  background-color: white;
+
+  min-height: 409px;
   padding-top: 190px;
-  padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 25px;
-  min-height: 409px;
-  margin-left: auto;
+  padding-left: 20px;
   margin-right: auto;
+  margin-left: auto;
+  background-color: white;
 }
 
 .technics__card-title {
-  margin-bottom: 19px;
-  min-height: 64px;
   position: relative;
+  min-height: 64px;
+  margin-bottom: 19px;
+  color: $yellow;
   font-size: 28px;
   font-weight: bold;
   text-align: center;
-  color: $yellow;
 
   @media (max-width: 650px) {
-    font-size: 28px !important;
     margin-bottom: 10px;
+    font-size: 28px !important;
   }
 
   &::before {
@@ -78,10 +82,10 @@
 }
 
 .technics__card-check {
-  text-align: center;
+  margin-bottom: 15px;
   font-size: 18px;
   line-height: 1.44;
-  margin-bottom: 15px;
+  text-align: center;
 
   @media (max-width: 650px) {
     font-size: 20px !important;
@@ -97,10 +101,11 @@
 }
 
 .technics__card-time {
-  text-align: center;
+  margin-bottom: 0;
   font-size: 18px;
   line-height: 1.44;
-  margin-bottom: 0;
+  text-align: center;
+
   span {
     font-weight: bold;
   }

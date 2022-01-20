@@ -108,6 +108,7 @@
 .modal__video {
   width: 98%;
   max-width: 1520px;
+
   @media (max-width: 1700px) {
     width: 75%;
     height: 42vw;

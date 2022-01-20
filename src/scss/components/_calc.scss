@@ -1,34 +1,36 @@
 .calc {
-  background-color: #282d54;
-  @include bg;
-  background-image: url('/src/img/bgs/calc-bg.jpg');
+  overflow: hidden;
+  min-height: 948px;
   padding-top: 74px;
   padding-bottom: 105px;
-  min-height: 948px;
-  overflow: hidden;
+  background-color: #282d54;
+  background-image: url('/src/img/bgs/calc-bg.jpg');
+
+  @include bg;
 
   @media (max-width: 960px) {
-    padding-bottom: 50px;
     min-height: auto;
     padding-top: 50px;
+    padding-bottom: 50px;
     background-image: none;
   }
 
   @media (max-width: 650px) {
-    padding-bottom: 30px;
     padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
 .calc__title {
   @include title;
   @include max-width(687px);
+
   margin-bottom: 38px;
   color: white;
 
   @media (max-width: 960px) {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     text-align: center;
   }
 }
@@ -37,8 +39,8 @@
   @include max-width(429px);
 
   @media (max-width: 960px) {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -61,9 +63,9 @@
 }
 
 .calc__input-label {
-  font-size: 18px;
-  color: white;
   margin-bottom: 10px;
+  color: white;
+  font-size: 18px;
 }
 
 .calc__input {
@@ -73,16 +75,17 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background: linear-gradient(
-    to right,
-    $yellow 0%,
-    $yellow 50%,
-    white 50%,
-    white 100%
-  );
+  background:
+    linear-gradient(
+      to right,
+      $yellow 0%,
+      $yellow 50%,
+      white 50%,
+      white 100%
+    );
   background-color: $yellow;
-  outline: none;
   border-radius: 5px;
+  outline: none;
 
   &:focus {
     outline: none;
@@ -91,66 +94,69 @@
   &::-webkit-slider-thumb {
     width: 24px;
     height: 24px;
+    border: none;
     -webkit-appearance: none;
     appearance: none;
-    @include bg;
-    background-image: url('/src/img/icons/thumb.png');
     background-color: white;
+    background-image: url('/src/img/icons/thumb.png');
+    border-radius: 50%;
+    box-shadow: none;
     cursor: pointer;
     outline: none;
-    border: none;
-    box-shadow: none;
-    border-radius: 50%;
+
+    @include bg;
 
     &:hover,
     &:focus {
-      transform: scale(1.1);
-      outline: none;
       border: none;
       box-shadow: none;
+      outline: none;
+      transform: scale(1.1);
     }
   }
 
   &::-moz-range-thumb {
     width: 24px;
     height: 24px;
+    border: none;
     -moz-appearance: none;
     appearance: none;
-    @include bg;
     background-image: url('/src/img/icons/thumb.png');
+    border-radius: 50%;
+    box-shadow: none;
     cursor: pointer;
     outline: none;
-    border: none;
-    box-shadow: none;
-    border-radius: 50%;
+
+    @include bg;
 
     &:hover,
     &:focus {
-      transform: scale(1.1);
-      outline: none;
       border: none;
       box-shadow: none;
+      outline: none;
+      transform: scale(1.1);
     }
   }
 
   &::-ms-thumb {
     width: 24px;
     height: 24px;
+    border: none;
     appearance: none;
-    @include bg;
     background-image: url('/src/img/icons/thumb.png');
+    border-radius: 50%;
+    box-shadow: none;
     cursor: pointer;
     outline: none;
-    border: none;
-    box-shadow: none;
-    border-radius: 50%;
+
+    @include bg;
 
     &:hover,
     &:focus {
-      transform: scale(1.1);
-      outline: none;
       border: none;
       box-shadow: none;
+      outline: none;
+      transform: scale(1.1);
     }
   }
 }
@@ -161,18 +167,18 @@
 }
 
 .calc__endpoint {
-  font-size: 14px;
-  color: white;
   width: 19px;
+  color: white;
+  font-size: 14px;
 }
 
 .calc__result {
-  padding-left: 95px;
   position: relative;
+  padding-left: 95px;
+  margin-bottom: 34px;
   color: white;
   font-size: 24px;
   line-height: 1.5;
-  margin-bottom: 34px;
 
   @media (max-width: 650px) {
     padding-left: 0;
@@ -192,14 +198,15 @@
   }
 
   &::before {
+    position: absolute;
+    top: 6px;
+    left: 0;
     width: 68px;
     height: 68px;
-    content: '';
-    @include bg;
     background-image: url('/src/img/icons/info-icon.png');
-    position: absolute;
-    left: 0px;
-    top: 6px;
+    content: '';
+
+    @include bg;
 
     @media (max-width: 650px) {
       content: none;
@@ -209,13 +216,13 @@
 
 .calc__img-box {
   position: absolute;
-  right: -142px;
   top: 26px;
+  right: -142px;
 
   @media (max-width: 1270px) {
-    right: 24px;
-    top: 166px;
     z-index: -1;
+    top: 166px;
+    right: 24px;
   }
 
   @media (max-width: 1150px) {
@@ -228,11 +235,11 @@
 }
 
 .calc__img-caption {
-  font-size: 48px;
-  font-weight: 300;
-  color: white;
-  margin-bottom: 0;
   position: absolute;
   top: 124px;
   right: 134px;
+  margin-bottom: 0;
+  color: white;
+  font-size: 48px;
+  font-weight: 300;
 }

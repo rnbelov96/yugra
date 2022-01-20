@@ -1,22 +1,26 @@
 .modal-form {
-  background-color: white;
-  border-radius: 10px;
   padding-top: 50px;
-  padding-left: 61px;
   padding-right: 61px;
   padding-bottom: 28px;
+  padding-left: 61px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow:
+    inset 0 -50px 23px -30px rgba(0, 0, 0, 0.08),
+    0 0 -69px -7px rgba(0, 0, 0, 0.14);
+  box-shadow:
+    inset 0 -50px 23px -30px rgba(0, 0, 0, 0.08),
+    0 0 50px -7px rgba(0, 0, 0, 0.14);
+
   @include max-width(466px);
-  -webkit-box-shadow: inset 0px -50px 23px -30px rgba(0, 0, 0, 0.08),
-    0px 0px -69px -7px rgba(0, 0, 0, 0.14);
-  box-shadow: inset 0px -50px 23px -30px rgba(0, 0, 0, 0.08),
-    0px 0px 50px -7px rgba(0, 0, 0, 0.14);
 
   &_join {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
     @media (max-width: 809px) {
-      margin-left: auto;
       margin-right: auto;
+      margin-left: auto;
     }
   }
 
@@ -24,9 +28,9 @@
     width: 98%;
 
     @media (max-width: 650px) {
-      width: 92%;
       position: relative;
       left: -10px;
+      width: 92%;
     }
   }
 
@@ -36,9 +40,9 @@
 }
 
 .modal-form__title {
+  margin-bottom: 33px;
   font-size: 30px;
   font-weight: bold;
-  margin-bottom: 33px;
   text-align: center;
 
   @media (max-width: 767px) {
@@ -52,35 +56,37 @@
 
 .modal-form__content {
   display: flex;
-  align-items: center;
-  gap: 30px;
-  justify-content: space-between;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 21px;
+  gap: 30px;
 }
 
 .modal-form__input-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
 .modal-form__input-box {
   @include max-width(323px);
+
   position: relative;
   border-bottom: 1px solid #a8a8a8;
 
   &::before {
-    left: 0px;
+    position: absolute;
+    left: 0;
     width: 17px;
     height: 22px;
-    @include bg;
-    content: '';
     background-size: contain;
-    position: absolute;
+    content: '';
+
+    @include bg;
   }
 
   @for $i from 1 through 3 {
@@ -91,12 +97,12 @@
 }
 
 .modal-form__input {
-  font-size: 16px;
-  padding-left: 28px;
-  padding-bottom: 10px;
-  background-color: transparent;
-  border: none;
   width: 100%;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
   outline: none;
 
   &::-webkit-input-placeholder {
@@ -122,13 +128,14 @@
 
 .modal-form__policy {
   @include max-width(798px);
+
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  color: #a8a8a8;
   font-size: 12px;
   line-height: 1.33;
-  margin-bottom: 0;
-  color: #a8a8a8;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 
   @media (max-width: 650px) {
     font-size: 12px !important;
@@ -136,6 +143,7 @@
 
   button {
     @include reset-btn;
+
     color: #a8a8a8;
 
     &:hover,

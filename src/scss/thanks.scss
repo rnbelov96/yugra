@@ -15,6 +15,7 @@
 
 .thanks__body {
   @include bg;
+
   background-image: url('/src/img/bgs/thanks-bg.jpg');
 }
 
@@ -49,11 +50,12 @@
 
 .thanks__title {
   @include max-width(867px);
+
+  margin-top: 39px;
+  margin-bottom: 30px;
+  color: white;
   font-size: 44px;
   letter-spacing: 1.1px;
-  color: white;
-  margin-bottom: 30px;
-  margin-top: 39px;
 
   @media (max-width: 1150px) {
     font-size: 40px;
@@ -75,42 +77,44 @@
 }
 
 .thanks__subtitle {
-  font-size: 20px;
-  color: white;
-  line-height: 1.5;
   margin-bottom: 32px;
+  color: white;
+  font-size: 20px;
+  line-height: 1.5;
 
   @include mobile-mb(20px);
 }
 
 .thanks__time-box {
   @include max-width(859px);
+
   padding-top: 40px;
+  padding-right: 38px;
   padding-bottom: 39px;
   padding-left: 256px;
-  padding-right: 38px;
-  background-color: #eaeae8;
-  @include bg;
-  background-position-x: left;
-  background-image: url('/src/img/thanks-time-bg.jpg');
   margin-bottom: 30px;
+  background-color: #eaeae8;
+  background-image: url('/src/img/thanks-time-bg.jpg');
+  background-position-x: left;
+
+  @include bg;
 
   @media (max-width: 750px) {
     padding-left: 290px;
   }
 
   @media (max-width: 650px) {
-    background-image: none;
     padding: 20px;
+    background-image: none;
   }
 
   @include mobile-mb(20px);
 }
 
 .thanks__time-title {
+  margin-bottom: 29px;
   font-size: 30px;
   font-weight: bold;
-  margin-bottom: 29px;
 
   @include mobile-mb(20px);
 
@@ -120,67 +124,70 @@
 }
 
 .thanks__list-title {
+  margin-bottom: 10px;
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .thanks__list {
   @include reset-list;
+
   margin-bottom: 30px;
 
   @include mobile-mb(20px);
 }
 
 .thanks__item {
-  padding-left: 28px;
   position: relative;
-  font-size: 16px;
+  padding-left: 28px;
   margin-bottom: 5px;
+  font-size: 16px;
 
   &:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   &::before {
-    left: 0px;
-    top: 0px;
     position: absolute;
+    top: 0;
+    left: 0;
     content: url('/src/img/icons/thanks-arrow.png');
     transform: scale(0.5);
   }
 }
 
 .thanks__time-text {
-  font-size: 16px;
   margin-bottom: 0;
+  font-size: 16px;
 }
 
 .thanks__text {
-  font-size: 20px;
-  color: white;
   margin-bottom: 14px;
+  color: white;
+  font-size: 20px;
 }
 
 .thanks__link {
-  padding-left: 47px;
+  position: relative;
   display: block;
+  padding-left: 47px;
+  margin-bottom: 33px;
   color: #f77d23;
   font-weight: bold;
   text-decoration: underline;
-  margin-bottom: 33px;
+
   @include mobile-mb(25px);
-  position: relative;
 
   &::before {
     position: absolute;
-    content: '';
-    @include y-align;
-    left: 0px;
+    left: 0;
     width: 32px;
     height: 36px;
-    @include bg;
     background-image: url('/src/img/icons/logo.png');
+    content: '';
+
+    @include y-align;
+    @include bg;
   }
 
   @include reset-link(#f77d23);
@@ -190,16 +197,17 @@
   padding-top: 23px;
   padding-bottom: 23px;
   background: rgb(57, 96, 162);
-  background: linear-gradient(
-    90deg,
-    rgba(57, 96, 162, 1) 0%,
-    rgba(57, 96, 162, 0) 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(57, 96, 162, 1) 0%,
+      rgba(57, 96, 162, 0) 100%
+    );
 }
 
 .thanks__note {
   margin-bottom: 0;
   color: white;
-  font-weight: bold;
   font-size: 28px;
+  font-weight: bold;
 }
