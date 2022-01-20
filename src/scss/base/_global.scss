@@ -57,8 +57,44 @@ main {
 
 .underline {
   background-image: url('/src/img/rec.jpg');
-  background-position-y: 0.89em;
+  background-position-y: 47px;
   background-repeat: repeat-x;
+
+  @media (max-width: 1150px) {
+    background-position-y: 39px;
+  }
+
+  @media (max-width: 991px) {
+    background-position-y: 29px;
+  }
+
+  @media (max-width: 767px) {
+    background-position-y: 23px;
+  }
+
+  @media (max-width: 650px) {
+    background-position-y: 17px;
+  }
+
+  &_thanks {
+    background-position-y: 37px;
+    
+    @media (max-width: 1150px) {
+      background-position-y: 34px;
+    }
+
+    @media (max-width: 991px) {
+      background-position-y: 29px;
+    }
+
+    @media (max-width: 767px) {
+      background-position-y: 23px;
+    }
+
+    @media (max-width: 650px) {
+      background-position-y: 19px;
+    }
+  }
 }
 
 .title-left-bottom-line,

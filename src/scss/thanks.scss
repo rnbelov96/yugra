@@ -13,12 +13,6 @@
   height: 100%;
 }
 
-.thanks__body {
-  @include bg;
-
-  background-image: url('/src/img/bgs/thanks-bg.jpg');
-}
-
 .thanks__wrapper {
   display: flex;
   flex-direction: column;
@@ -46,6 +40,12 @@
 
 .thanks {
   flex: 1 0 auto;
+}
+
+.thanks__content {
+  @include bg;
+
+  background-image: url('/src/img/bgs/thanks-bg.jpg');
 }
 
 .thanks__title {
