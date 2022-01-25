@@ -95,15 +95,13 @@
   }
 
   &::before {
+    @include bg;
     position: absolute;
     left: 0;
     width: 17px;
     height: 22px;
     background-size: contain;
     content: '';
-
-    @include bg;
-    background-size: contain;
   }
 
   @for $i from 1 through 3 {
